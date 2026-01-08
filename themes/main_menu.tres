@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bvyertuunhye7"]
+
+[ext_resource type="FontFile" uid="uid://cixohe42kxmvu" path="res://themes/fonts/league_spartan_bold.ttf" id="1_djdlk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75ofa"]
+content_margin_left = 4.0
+content_margin_top = 8.0
+content_margin_right = 4.0
+content_margin_bottom = 8.0
+bg_color = Color(0.2914893, 0.4617204, 0.29223993, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.116807364, 0.22038683, 0.16387615, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.1882353)
+shadow_size = 20
+anti_aliasing = false
+
+[resource]
+default_font = ExtResource("1_djdlk")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_75ofa")
+Button/styles/focus = SubResource("StyleBoxFlat_75ofa")
+Button/styles/hover = SubResource("StyleBoxFlat_75ofa")
+Button/styles/normal = SubResource("StyleBoxFlat_75ofa")
+Button/styles/pressed = SubResource("StyleBoxFlat_75ofa")

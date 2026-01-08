@@ -1,0 +1,327 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj6yss6l653qa"]
+
+[ext_resource type="Texture2D" uid="uid://bra3hwb1lnjvu" path="res://images/vignette.png" id="1_3rkf3"]
+[ext_resource type="Script" uid="uid://b1flga8wtbld1" path="res://scripts/menu/menu.gd" id="1_247la"]
+[ext_resource type="Theme" uid="uid://bvyertuunhye7" path="res://themes/main_menu.tres" id="2_247la"]
+[ext_resource type="Texture2D" uid="uid://bafym8lcd76yg" path="res://themes/gradients/main_menu.tres" id="2_hj162"]
+[ext_resource type="Texture2D" uid="uid://c06aaa8dtbgcr" path="res://themes/gradients/credits.tres" id="4_xn6kt"]
+[ext_resource type="Texture2D" uid="uid://ka42k2j8a0ug" path="res://themes/gradients/settings.tres" id="6_xn6kt"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_247la")
+
+[node name="main_menu" type="TextureRect" parent="."]
+z_index = -99
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("2_hj162")
+
+[node name="vignette" type="TextureRect" parent="main_menu"]
+z_index = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 0
+texture = ExtResource("1_3rkf3")
+metadata/_edit_use_anchors_ = true
+
+[node name="vbox" type="VBoxContainer" parent="main_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -712.0
+offset_top = -415.0
+offset_right = 672.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = ExtResource("2_247la")
+alignment = 1
+
+[node name="title" type="Label" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.73333335, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.16899684, 0.40683764, 0.27268642, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 250
+text = "Breeze Trials"
+horizontal_alignment = 1
+
+[node name="main_levels" type="Button" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Main Levels"
+
+[node name="custom_maps" type="Button" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Custom Maps"
+
+[node name="settings" type="Button" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="credits" type="Button" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+
+[node name="quit" type="Button" parent="main_menu/vbox"]
+z_index = 2
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="credits" type="TextureRect" parent="."]
+visible = false
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("4_xn6kt")
+
+[node name="vignette" type="TextureRect" parent="credits"]
+z_index = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 0
+texture = ExtResource("1_3rkf3")
+metadata/_edit_use_anchors_ = true
+
+[node name="vbox" type="VBoxContainer" parent="credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -712.0
+offset_top = -459.5
+offset_right = 672.0
+offset_bottom = 419.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = ExtResource("2_247la")
+alignment = 1
+
+[node name="title" type="Label" parent="credits/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.9917378, 0.42157233, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.6175447, 2.6183128e-05, 0.46413237, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 250
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="text_1" type="Label" parent="credits/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.96368617, 0.9494793, 0.8079109, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.46944386, 0.31538966, 0.14666304, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 100
+text = "Assets"
+horizontal_alignment = 1
+
+[node name="text_2" type="Label" parent="credits/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.96368617, 0.9494793, 0.8079109, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.46944386, 0.31538966, 0.14666304, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Materials from AmbientCG.com & cc0-textures.com
+"
+horizontal_alignment = 1
+
+[node name="text_3" type="Label" parent="credits/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.96368617, 0.9494793, 0.8079109, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.46944386, 0.31538966, 0.14666304, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 100
+text = "Tools"
+horizontal_alignment = 1
+
+[node name="text_4" type="Label" parent="credits/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.96368617, 0.9494793, 0.8079109, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.46944386, 0.31538966, 0.14666304, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Game Engine: Godot Engine (v4.5)
+3D-Modeling: Blender
+2D Assets and Drawing: Krita, Photopea
+AI: Deepseek (troubleshooting & brainstorming), Copilot (logo)
+"
+horizontal_alignment = 1
+
+[node name="back" type="Button" parent="credits/vbox"]
+z_index = 5
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[node name="settings" type="TextureRect" parent="."]
+visible = false
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("6_xn6kt")
+
+[node name="vignette" type="TextureRect" parent="settings"]
+z_index = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 0
+texture = ExtResource("1_3rkf3")
+metadata/_edit_use_anchors_ = true
+
+[node name="vbox" type="VBoxContainer" parent="settings"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_right = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = ExtResource("2_247la")
+alignment = 1
+
+[node name="title" type="Label" parent="settings/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.9946844, 0.6768414, 0.5794238, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.67829865, 0.3635711, 0.3214071, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 250
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="sens" type="Label" parent="settings/vbox"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.99668926, 0.7210396, 0.63583964, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.67829865, 0.3635711, 0.3214071, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 50
+text = "Sensitivity"
+horizontal_alignment = 1
+
+[node name="sens_box" type="LineEdit" parent="settings/vbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Default: 0.1"
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="settings/vbox"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 50
+text = "V-Sync"
+
+[node name="back" type="Button" parent="settings/vbox"]
+z_index = 5
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[connection signal="pressed" from="main_menu/vbox/settings" to="." method="_main_settings"]
+[connection signal="pressed" from="main_menu/vbox/credits" to="." method="_main_credits"]
+[connection signal="pressed" from="main_menu/vbox/quit" to="." method="_main_quit"]
+[connection signal="pressed" from="credits/vbox/back" to="." method="_credits_exit"]
+[connection signal="pressed" from="settings/vbox/back" to="." method="_settings_exit"]

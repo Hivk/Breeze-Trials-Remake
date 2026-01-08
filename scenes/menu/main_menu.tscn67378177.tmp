@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj6yss6l653qa"]
+
+[ext_resource type="Texture2D" uid="uid://bra3hwb1lnjvu" path="res://images/vignette.png" id="1_3rkf3"]
+[ext_resource type="Script" uid="uid://b1flga8wtbld1" path="res://scripts/menu/main_menu.gd" id="1_247la"]
+[ext_resource type="Theme" uid="uid://bvyertuunhye7" path="res://themes/main_menu.tres" id="2_247la"]
+
+[sub_resource type="Gradient" id="Gradient_kiqgm"]
+offsets = PackedFloat32Array(0.006666667, 1)
+colors = PackedColorArray(0.31974235, 0.6159292, 0.63889885, 1, 0.43308, 1, 0.5043446, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hj162"]
+gradient = SubResource("Gradient_kiqgm")
+width = 400
+height = 1
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_247la")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_hj162")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.033333335
+anchor_top = -0.033333335
+anchor_right = 2.0777776
+anchor_bottom = 2.0777779
+offset_left = 64.0
+offset_top = 36.0
+offset_right = -2069.3335
+offset_bottom = -1164.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3rkf3")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -692.0
+offset_top = -190.0
+offset_right = 692.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_247la")
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.73333335, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.58431375)
+theme_override_colors/font_outline_color = Color(0.16899684, 0.40683764, 0.27268642, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 250
+text = "Breeze Trials"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Main Levels"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Custom Maps"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_247la")
+theme_override_colors/font_color = Color(0.59285295, 0.8405803, 0.7143255, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Credits"
