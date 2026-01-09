@@ -25,9 +25,14 @@ window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_converter/plugin.cfg", "res://addons/csg_mesher/plugin.cfg")
+enabled=PackedStringArray("res://addons/csg_converter/plugin.cfg")
 
 [input]
 
